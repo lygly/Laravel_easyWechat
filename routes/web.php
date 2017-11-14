@@ -18,4 +18,7 @@ Route::get('/', function () {
 //Route::any('wechat/server','WechatController@server');
 Route::group(['middleware'=>'csrf.ignore','prefix'=>'wechat','namespace'=>'WeChat'],function (){
     Route::any('wechat','WechatController@server');//连接微信和基础配置
+    Route::any('weixin','WechatController@weixin');//连接微信和基础配置
+    Route::any('oauth_callback','WechatController@oauth_callback');//连接微信和基础配置
+
 });
