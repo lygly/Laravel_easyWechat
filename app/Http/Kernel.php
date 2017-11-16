@@ -58,5 +58,6 @@ class Kernel extends HttpKernel
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'csrf.ignore'=>\App\Http\Middleware\VerifyCsrfToken::class, //忽略CSRF验证中间件
+        'admin.login'=>\App\Http\Middleware\AdminLogin::class, //后台登录中间件
     ];
 }

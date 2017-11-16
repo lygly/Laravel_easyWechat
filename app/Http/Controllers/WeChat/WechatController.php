@@ -59,7 +59,7 @@ class WechatController extends Controller
                ],
            ],
        ];
-     //  $menu->add($buttons);
+       $menu->add($buttons);
        $id = '420249046';
        $menu->destroy($id);
     }
